@@ -1,0 +1,31 @@
+### GET request to example server
+GET http://127.0.0.1:8000/api/v1/history
+    ?author=Stephen Hawking&title=A BRIEF HISTORY OF TIME&offset=0
+
+###
+POST http://127.0.0.1:8000/api/v1/history
+Content-Type: application/json
+
+{
+    "author": "Stephen Hawking",
+    "title": "A BRIEF HISTORY OF TIME",
+    "offset": 0,
+    "isbn": [
+      "0553380168",
+      "9780553380163"
+    ]
+}
+
+
+### POST valid request
+POST http://127.0.0.1:8000/api/v1/history
+Content-Type: application/json
+
+{
+    "title": "A BRIEF HISTORY OF TIME",
+    "author": "Stephen Hawking",
+    "offset": 0,
+    "isbn": [
+        "9780553380163"
+    ]
+}
